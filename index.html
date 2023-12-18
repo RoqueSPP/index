@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <link type="image/png" sizes="16x16" rel="icon" href="img/icons8-formulário-de-aplicação-32.png">
+    <meta name="description" content="FORMULÁRIOS COM HTML, CSS & JS!">
+    <meta name="keywords" content="HTML, CSS, FORMULÁRIOS, JavaScript, Playwright, Cypress, Robot, Codeceptjs, Appium, Selenium, Pactum, Postman">
+    <title>Cadastro</title>
+</head>
+<body>
+    <section class="container">
+        <div class="form-image">
+            <img src="./img/undraw_fill_form_re_cwyf.png" alt="Form">
+        </div>
+
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <h1 class="h1">Cadastro de Pessoas</h1>
+                </div>
+
+                
+                <h2>Basic information:</h2>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="name">FirstName:</label>
+                        <input class="" type="text" name="firstname" id="name" placeholder="Ex: Fabio" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="lastname">LastName:</label>
+                        <input class="" type="text" name="lastname" id="lastname" placeholder="Ex: Silva" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="birth">Birthday:</label>
+                        <input type="date" name="birth" id="birth" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="age">Age:</label>
+                        <input type="number" name="age" id="age" placeholder="27" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="height">Height:</label>
+                        <input type="text" name="height" id="height" placeholder="1,78" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="weight">Weight:</label>
+                        <input type="text"  name="weight" id="weight" placeholder="80kg" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="blood">Blood Type:</label>
+                        <input type="text" name="blood" id="blood" placeholder="O+" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="skin">Skin Collor:</label>
+                        <input name="skin" id="skin" placeholder="All" required>
+                    </div>
+                </div>
+                <input type="checkbox" name="checkbox1">
+
+                
+                <h2>Personal Data:</h2>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="cpf">CPF:</label>
+                        <input class="" type="number" name="cpf" id="cpf" placeholder="xxx.xxx.xxx-xx" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="rg">RG:</label>
+                        <input class="" type="number" name="rg" id="rg" placeholder="xx.xxx.xxx.x" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="phone">Tel:</label>
+                        <input type="number" name="phone" id="phone" placeholder="(xx) xxxx-xxxx" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="mobile">Mobile:</label>
+                        <input type="number" name="mobile" id="mobile" placeholder="(xx) xxxxx-xxxx" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email">Email:</label>
+                        <input class="" type="email" name="email" id="email" placeholder="test@test.com" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="passwoord">Password:</label>
+                        <input type="text" name="passwoord" id="password" placeholder="Ex:123456" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="mother">Mother Name:</label>
+                        <input class="" type="text" name="mother" id="mother" placeholder="Ex: Maria" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="father">Father Name:</label>
+                        <input class="" type="text" name="father" id="father" placeholder="Ex: João" required>
+                    </div>
+                </div>
+                <input type="checkbox" name="checkbox2">
+                    
+                
+                <h2>Adress:</h2>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="postalCode">PostalCode:</label>
+                        <input type="text" name="postalCode" id="postalCode" placeholder="xxxxxx-xxx" required>
+                    </div>
+                            
+                    <div class="input-box">
+                        <label for="address">Address:</label>
+                        <input type="text" name="address" id="address" placeholder="Av, Rua, Trav" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="addressNumber">Number:</label>
+                        <input class="" type="number" name="addressNumber" id="addressNumber" placeholder="999" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="neighborhood">Neighborhood:</label>
+                        <input type="text" name="neighborhood" id="neighborhood" placeholder="Neighborhood" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="city">City:</label>
+                        <input type="text" name="city" id="city" placeholder="São Paulo" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="state">State:</label>
+                        <input type="text" name="state" id="state" placeholder="SP" required>
+                    </div>
+                </div>
+                <input type="checkbox" name="checkbox3">
+
+                
+                <h2>Other Infos:</h2>
+                <div class="select-group">
+                    <div class="select-box">
+                        <label for="select1">Sex (Male/Feamale):</label>
+                        <select id="select1" name="select">
+                            <option value="--Select-- selected">--Select--</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                            <option value="No Replay">No Replay</option>
+                        </select>
+                    </div>
+                    
+                    <div class="select-box">
+                        <label for="select2">Astrological Signs:</label>
+                        <select id="select2" name="select">
+                            <option value="--Select-- selected">--Select--</option>
+                            <option value="Aries">Aries</option>
+                            <option value="Taurus">Taurus</option>
+                            <option value="Gemini">Gemini</option>
+                            <option value="Cancer">Cancer</option>
+                            <option value="Leo">Leo</option>
+                            <option value="Virgo">Virgo</option>
+                            <option value="Libra">Libra</option>
+                            <option value="Scorpio">Scorpio</option>
+                            <option value="Sagittarius">Sagittarius</option>
+                            <option value="Capricorn">Capricorn</option>
+                            <option value="aquarium">aquarium</option>
+                            <option value="Pisces">Pisces</option>
+                        </select>
+                    </div>
+                </div>
+                <input type="checkbox" name="checkbox4">
+            </form>
+
+            <button id="btnButton">
+                <a href='https://roquespp.github.io/Pagina_Teste/pass'>Registration</a>
+            </button>
+        </div>
+    </section>        
+    <script  src="script/script.js"  type="text/javascript"> </script>
+</body>
+
+</html>
