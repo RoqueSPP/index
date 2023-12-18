@@ -46,18 +46,12 @@ body {
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5)
 }
 
-.form-image {
-  width: 50%;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-}
+
 
 .form-image img {
   width: 30rem;
-  height: 41rem;
+  height: 20rem;
+  margin-top: auto;
 }
 
 .form {
