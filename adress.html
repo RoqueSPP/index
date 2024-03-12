@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <meta name="description" content="FORMULÁRIOS COM HTML, CSS & JS!">
+    <meta name="keywords"
+        content="HTML, CSS, FORMULÁRIOS, JavaScript, Playwright, Cypress, Robot, Codeceptjs, Appium, Selenium, Pactum, Postman">
+
+    <script src="script/vue.js" type="text/javascript"> </script>
+
+
+    <title>Pagina de testes</title>
+</head>
+<h1>Teste De Automação</h1>
+
+<body>
+    <div id="app">
+
+        <div id="app">
+            <form>
+
+                <fieldset>
+                    <legend><strong>Adress:</strong></legend>
+                    <label for="postalCode">PostalCode:
+                        <input class="postalcode" type="number" name="postalCode" id="postalCode" placeholder="Cep"
+                            v-model="form.postalCode" required>
+                        <label for="address">Address:
+                            <input type="text" name="address" id="address" placeholder="Endereço" v-model="form.address"
+                                required>
+
+                            <label for="addressNumber">Address Number:
+                                <input type="number" name="addressNumber" id="addressNumber" placeholder="numero"
+                                    v-model="form.addressNumber" required>
+                                <br><br>
+                                <label for="neighborhood">neighborhood:
+                                    <input type="text" name="neighborhood" id="neighborhood" placeholder="Bairro"
+                                        v-model="form.neighborhood" required>
+
+                                    <label for="city">City:
+                                        <input class="city" type="text" name="city" id="city" placeholder="Cidade"
+                                            v-model="form.city" required>
+
+                                        <label for="state">State:
+                                            <input class="state" type="text" name="state" id="state"
+                                                placeholder="Estado" v-model="form.state" required>
+
+                                            <input type="button" value="Cadastrar"
+                                                @click="adicionarFornecedor(fornecedor)">
+                                    
+                </fieldset>
+
+
+
+            </form><br>
+
+            <div>
+                <!-- <table class="table"> -->
+
+
+                <ul v-for=" fornecedor in fornecedores">
+                    <li>{{fornecedor.postalCode}}
+                    <li>{{fornecedor.address}}
+                    <li>{{fornecedor.addressNumber}}
+                    <li>{{fornecedor.neighborhood}}
+                    <li>{{fornecedor.city}}
+                    <li>{{fornecedor.state}}
+                        </fieldset>
+                    <li>
+                        <button class="danger" @click="apagarFornecedor(fornecedor)">Apagar</button>
+            </div>
+            <!-- </table> -->
+        </div>
+
+        <script>
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    form: {
+
+
+                    },
+
+                    fornecedores: [
+
+
+                    ]
+                },
+
+                methods: {
+                    limparformulario: function () {
+
+                    },
+                    adicionarFornecedor: function () {
+                        this.fornecedores.push(this.form)
+                        this.limparformulario()
+                    },
+
+                    apagarFornecedor: function (fornecedor) {
+                        var posicao = this.fornecedores.indexOf(fornecedor)
+                        this.fornecedores.splice(posicao, 1)
+
+                    }
+                }
+
+            })
+
+        </script>
+
+
+
+</body>
+
+</html>
