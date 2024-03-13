@@ -91,14 +91,14 @@
 
 
                 <ul v-for=" fornecedor in fornecedores">
-                    <li>{{fornecedor.cpf}}
-                    <li>{{fornecedor.rg}}
-                    <li>{{fornecedor.phone}}
-                    <li>{{fornecedor.select}}
-                    <li>{{fornecedor.mobile}}
-                    <li>{{fornecedor.email}}
-                    <li>{{fornecedor.mather}}
-                    <li>{{fornecedor.father}}
+                    <li>CPF - {{fornecedor.cpf}}
+                    <li>RG - {{fornecedor.rg}}
+                    <li>Telefone - {{fornecedor.phone}}
+                    <li>Signo - {{fornecedor.select}}
+                    <li>Celula - {{fornecedor.mobile}}
+                    <li>Email - {{fornecedor.email}}
+                    <li>Nome da mãe{{fornecedor.mather}}
+                    <li>Nome do pai{{fornecedor.father}}
                         </fieldset>
                     <li>
                         <button class="danger" @click="apagarFornecedor(fornecedor)">Apagar</button>

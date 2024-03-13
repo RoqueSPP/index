@@ -87,16 +87,15 @@
 
                 <ul v-for=" fornecedor in fornecedores">
 
-                    <li>{{fornecedor.name}}
-                    <li>{{fornecedor.lastName}}
-
-                    <li>{{fornecedor.password}}
-                    <li>{{fornecedor.age}}
-                    <li>{{fornecedor.birth}}
-                    <li>{{fornecedor.height}}
-                    <li>{{fornecedor.Weight}}
-                    <li>{{fornecedor.blood}}
-                    <li>{{fornecedor.skin}}
+                    <li>Nome - {{fornecedor.name}}
+                    <li>Sobrenome - {{fornecedor.lastName}}
+                    <li>Senha - {{fornecedor.password}}
+                    <li>Idade - {{fornecedor.age}}
+                    <li>Data de Nascimento - {{fornecedor.birth}}
+                    <li>Altura - {{fornecedor.height}}
+                    <li>Peso - {{fornecedor.Weight}}
+                    <li>Tipo sanguineo{{fornecedor.blood}}
+                    <li>Cor de pele{{fornecedor.skin}}
                         </fieldset>
                     <li>
                         <button class="danger" @click="apagarFornecedor(fornecedor)">Apagar</button>

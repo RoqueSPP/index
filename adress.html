@@ -63,12 +63,12 @@
 
 
                 <ul v-for=" fornecedor in fornecedores">
-                    <li>{{fornecedor.postalCode}}
-                    <li>{{fornecedor.address}}
-                    <li>{{fornecedor.addressNumber}}
-                    <li>{{fornecedor.neighborhood}}
-                    <li>{{fornecedor.city}}
-                    <li>{{fornecedor.state}}
+                    <li>CEP - {{fornecedor.postalCode}}
+                    <li>Endereço - {{fornecedor.address}}
+                    <li>Número - {{fornecedor.addressNumber}}
+                    <li>Bairro - {{fornecedor.neighborhood}}
+                    <li>Cidade - {{fornecedor.city}}
+                    <li>Estado - {{fornecedor.state}}
                         </fieldset>
                     <li>
                         <button class="danger" @click="apagarFornecedor(fornecedor)">Apagar</button>
