@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Pessoa - 4devs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #cnpj-input {
+            font-size: 30px;
+            text-align: center;
+            margin: 20px 0px;
+            min-height: 40px;
+            padding: 5px;
+            width: 100%;
+            border: 2px solid #cecece;
+            -webkit-box-shadow: 3px 4px 5px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 3px 4px 5px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 3px 4px 5px -1px rgba(0, 0, 0, 0.75);
+        }
+
+        #cpf-input {
+            font-size: 30px;
+            text-align: center;
+            margin: 20px 0px;
+            min-height: 40px;
+            padding: 5px;
+            width: 100%;
+            border: 2px solid #cecece;
+            -webkit-box-shadow: 3px 4px 5px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 3px 4px 5px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 3px 4px 5px -1px rgba(0, 0, 0, 0.75);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Gerador de CNPJ</h1>
+    <p>Gerador de CNPJ válidos para você testar suas aplicações e validações, capaz de gerar inúmeros CNPJs
+        randomicamente de forma ilimitada.</p>
+
+    <input id="cnpj-input" disabled />
+    <br /><br />
+    <button onclick="gerarNovoCNPJ()">GERAR NOVO CNPJ</button>
+
+    <script type="text/javascript">
+        // Função que gera um CNPJ válido aleatório
+        function gerarNovoCNPJ() {
+            __cnpj(document.getElementById('cnpj-input'));
+            jQuery("#cnpj-input").focus(function () { jQuery(this).select(); });
+        }
+        function _vl(a) {
+            if ("" == (a = a.replace(/[^\d]+/g, ""))) return !1;
+            if (11 != a.length || "00000000000" == a || "11111111111" == a || "22222222222" == a || "33333333333" == a || "44444444444" == a || "55555555555" == a || "66666666666" == a || "77777777777" == a || "88888888888" == a || "99999999999" == a) return !1;
+            for (add = 0, i = 0; i < 9; i++) add += parseInt(a.charAt(i)) * (10 - i);
+            eval('if (rev = 11 - add % 11, 10 != rev && 11 != rev || (rev = 0), rev != parseInt(a.charAt(9))) return !1; ');
+            for (add = 0, i = 0; i < 10; i++) add += parseInt(a.charAt(i)) * (11 - i);
+            eval(' return rev = 11 - add % 11, 10 != rev && 11 != rev || (rev = 0), rev == parseInt(a.charAt(10)) ');
+        } function __cnpj(a) {
+            var b = !0,
+                c = 9,
+                d = _r(c),
+                e = _r(c),
+                f = _r(c),
+                g = _r(c),
+                h = _r(c),
+                i = _r(c),
+                j = _r(c),
+                k = _r(c),
+                l = 0,
+                m = 0,
+                n = 0,
+                o = 1,
+                p = 2 * o + 3 * n + 4 * m + 5 * l + 6 * k + 7 * j + 8 * i + 9 * h + 2 * g + 3 * f + 4 * e + 5 * d;
+            eval(' (p = 11 - _m(p, 11)) >= 10 && (p = 0); ');
+            var q = 2 * p + 3 * o + 4 * n + 5 * m + 6 * l + 7 * k + 8 * j + 9 * i + 2 * h + 3 * g + 4 * f + 5 * e + 6 * d;
+            eval(' q = 11 - _m(q, 11), q >= 10 && (q = 0), retorno = "", cnpj = b ? "" + d + e + "." + f + g + h + "." + i + j + k + "/" + l + m + n + o + "-" + p + q : "" + d + e + f + g + h + i + j + k + l + m + n + o + p + q, a.value = cnpj ');
+        } function _r(a) {
+            return Math.round(Math.random() * a)
+        } function _m(a, b) {
+            return Math.round(a - Math.floor(a / b) * b)
+        }
+
+    </script>
+
+<h1>Gerador de CPF</h1>
+<p>Gerador de CPF válidos para você testar suas aplicações e validações, capaz de gerar inúmeros CPFs
+    randomicamente de forma ilimitada.</p>
+
+<input id="cpf-input" disabled />
+<br /><br />
+<button onclick="gerarNovoCPF()">GERAR NOVO CPF</button>
+
+<script type="text/javascript">
+    // Função que gera um CNPJ válido aleatório
+    function gerarNovoCPF() {
+    var cpf = gerarCPF();
+    document.getElementById('cpf-input').value = cpf; // Atribuindo o CPF gerado ao campo de entrada
+    jQuery("#cpf-input").focus(function () { jQuery(this).select(); });
+}
+
+function gerarCPF() {
+    // Gerar os 9 primeiros dígitos aleatórios do CPF
+    var cpfBase = [];
+    for (var i = 0; i < 9; i++) {
+        cpfBase.push(Math.floor(Math.random() * 10));
+    }
+
+    // Calcular os dois dígitos verificadores
+    var digito1 = calcularDigito(cpfBase, 10); // Primeiro dígito verificador
+    var digito2 = calcularDigito(cpfBase.concat(digito1), 11); // Segundo dígito verificador
+
+    // Retorna o CPF completo com formatação
+    return formatarCPF(cpfBase.concat(digito1, digito2));
+}
+
+function calcularDigito(cpfBase, peso) {
+    var soma = 0;
+    for (var i = 0; i < cpfBase.length; i++) {
+        soma += cpfBase[i] * (peso - i);
+    }
+    var resto = soma % 11;
+    return (resto < 2) ? 0 : 11 - resto;
+}
+
+function formatarCPF(cpf) {
+    return cpf.slice(0, 3).join('') + '.' + cpf.slice(3, 6).join('') + '.' + cpf.slice(6, 9).join('') + '-' + cpf.slice(9, 11).join('');
+}
+
+// Função para validação de CPF (opcional, se você precisar validar depois)
+function validarCPF(cpf) {
+    cpf = cpf.replace(/[^\d]+/g, ''); // Remove caracteres não numéricos
+
+    if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) {
+        return false; // CPF inválido (sequências repetidas)
+    }
+
+    var cpfBase = cpf.slice(0, 9).split('').map(Number);
+    var digito1 = calcularDigito(cpfBase, 10);
+    var digito2 = calcularDigito(cpfBase.concat(digito1), 11);
+
+    return cpf === cpfBase.concat(digito1, digito2).join('');
+}
+
+
+</script>
+
+</body>
+
+</html>
