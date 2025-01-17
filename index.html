@@ -170,7 +170,18 @@ function validarCPF(cpf) {
 
 
 </script>
-
+<script>
+var type = "serie";
+var imdb = "tt2442560";
+var season = "1";
+var episode = "1";
+embedderJSPlugin(type, imdb, season, episode);
+function embedderJSPlugin(type, imdb, season, episode){
+if (type == "filme") { season="";episode="";}else{if (season !== "") { season = "/"+season; }if (episode !== "") { episode = "/"+episode; }}
+    var frame = document.getElementById('embedderContainerVideo');
+    frame.innerHTML += '<iframe src="https://embedflix.top/'+type+'/'+imdb+season+episode+'" scrolling="no" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>';
+}
+</script>
 </body>
 
 </html>
