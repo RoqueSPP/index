@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Fotos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f2f2f2;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      background-color: #333;
+      color: white;
+    }
+
+    h2 {
+        color: black;
+    }
+    h3{
+        color: black;
+    }
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Minha Galeria de Fotos</h1>
+  </header>
+
+  <div>
+    <h2>Me chamo Eliana Viana da Cruz</h2>
+    <h3>sempre trabalhei em casa de família como diarista, mas comecei a gostar de custurar vendo minha patroa fazendo os trabalhos como custureira. Aprendi com ela a costurar e com o salário que recebia, em 2 anos comprei minha primeira maquina de costura. Foi muito bom no começo, mas com a facilidade de comprar roupas no mercado, isso acabou prejudicando quem trabalha com essa profissão. Hoje devido a falta de trabalho como costureira, estou fazendo um curso de manicure e cabeleireira para sustentar a casa.
+    </h3>
+  </div>
+  <section class="galeria">
+    <img src="src/foto01.jpeg" alt="Foto 1">
+    <img src="src/foto02.jpeg" alt="Foto 2">
+    <img src="src/foto03.jpeg" alt="Foto 3">
+    <img src="src/foto04.jpeg" alt="Foto 4">
+    
+  </section>
+
+</body>
+</html>
